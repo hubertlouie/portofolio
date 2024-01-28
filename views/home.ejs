@@ -1,0 +1,229 @@
+
+
+<div class="content">
+    <div id="myTabContent" class="tab-content">
+        
+        <div id="home" role="tabpanel" aria-labelledby="home-tab" class="tab-pane fade py-4 show active">
+            <div class="container containerr">
+            
+                
+                <div class="row">                    
+                    <div class="col-6">
+                        <h1>Hi, my name is <br> <span class="textillate" data-in-effect="pulse"> Hubert Louie</span></h1>
+
+                    </div>
+                    <div class="col-6 codeLogo">
+                        
+                    </div>
+    
+                </div>
+
+            </div>
+        </div>
+
+        <div id="about" role="tabpanel" aria-labelledby="about-tab" class="tab-pane fade py-4">
+            <div class="container">
+                <div class="row">
+                    <div class="col-6">
+
+                        <h1>About Me</h1>
+                    </div>
+                    <div class="col-6 aboutMe">
+                        <div>
+
+                            I am a Computer Science graduate with a Bachelor's degree, 
+                            my primary focus lies in web development, specializing in PHP and JavaScript programming 
+                            languages. I have cultivated a robust skill set by exploring various technology stacks, 
+                            including Laravel, Node.js, and Express.js. Through my academic and practical experiences,
+                            I have successfully developed multiple projects centered around website development, 
+                            utilizing the Laravel framework and PHP.
+                        </div>
+                        <br>
+                        <div>
+                            Driven by a passion for continuous improvement, I consistently challenge myself to 
+                            acquire new knowledge and skills. Currently, I am expanding my expertise by delving 
+                            into the realm of web3 development, reflecting my commitment to staying at the 
+                            forefront of technological advancements. With a foundation in computer science
+                             and a comprehensive understanding of web development, 
+                             I am poised to contribute effectively to innovative and dynamic 
+                             projects in the ever-evolving field of technology.
+                        </div>
+
+        
+                    </div>
+                </div>
+            </div>           
+        </div>
+
+        <div id="skill" role="tabpanel" aria-labelledby="skill-tab" class="tab-pane fade py-4">
+            <div class="container ccont">
+                <div class="stackTitle">
+                    <h2 class="text-center">STACKS & SKILLS</h2>
+                </div>
+                <div class="row stacksCont">
+                    <div class="stacks col-3">
+                       
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/laravel/laravel-plain.svg" class="skillImg"/>
+          
+                        <div class="text-center stacksTxt">Laravel</div>
+                    </div>
+                    <div class="stacks col-3">
+                        
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" class="skillImg" />
+          
+                        <div class="text-center stacksTxt">Node.js</div>
+                    </div>
+                    <div class="stacks col-3">
+                        
+                        <!-- <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original-wordmark.svg" class="skillImg"/> -->
+                        
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg" class="skillImg" />
+          
+                        <div class="text-center stacksTxt">Express.js</div>
+                    </div>
+                    <div class="stacks col-3">
+                       
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/codeigniter/codeigniter-plain.svg" class="skillImg" />
+          
+                        <div class="text-center stacksTxt">CodeIgniter</div>
+                    </div>
+                    <div class="stacks col-3">
+                        
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-plain.svg" class="skillImg" />
+          
+                        <div class="text-center stacksTxt">PHP</div>
+                    </div>
+                    <div class="stacks col-3">
+                        
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-plain.svg" class="skillImg" />
+          
+                        <div class="text-center stacksTxt">JavaScript</div>
+                    </div>
+                    <div class="stacks col-3">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" class="skillImg"/>
+                        <div class="text-center stacksTxt">MySQL</div>
+                    </div>
+                    <div class="stacks col-3">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg" class="skillImg" />
+                        <div class="text-center stacksTxt">Figma</div>
+                    </div>
+
+                    <div class="stacks col-3"> 
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg" class="skillImg"/>
+                        <div class="text-center stacksTxt">MongoDB</div>
+                    </div>
+
+                    <div class="stacks col-3"> 
+                        
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" class="skillImg"/>
+          
+                        <div class="text-center stacksTxt">HTML</div>
+                    </div>
+
+                    <div class="stacks col-3"> 
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" class="skillImg"/>
+                        <div class="text-center stacksTxt">CSS</div>
+                    </div>
+                </div>
+            </div>         
+        </div>
+
+        <div id="portofolio" role="tabpanel" aria-labelledby="portofolio-tab" class="tab-pane fade py-4">
+            <div class="container">
+                <div class="stackTitle">
+                    <h2 class="text-center">PROJECTS</h2>
+                </div>
+                <div class="row projCont">
+
+
+                    <% project.forEach(p => { %>
+
+                        <% if (p.type === 'public') { %>
+                            <div class="cardCon col-6">
+                                <div class="card">
+                                    <!-- <img src="..." class="card-img-top projImg" alt="..."> -->
+                                    <div class="card-body">
+                                      <h5 class="card-title"><%= p.name %></h5>
+                                      <p class="card-text"><%= p.description %></p>
+                                      <p class="card-text useStack">Stacks : <%= p.stack %></p>
+                                      <a href="<%= p.url %>" class="btn btnProj">View code on github</a>
+                                    </div>
+                                </div>
+                            </div>
+                        <% } else { %>
+
+                            <div class="cardCon col-6">
+                                <div class="card">
+                                    <!-- <img src="..." class="card-img-top projImg" alt="..."> -->
+                                    <div class="card-body">
+                                      <h5 class="card-title"><%= p.name %> </h5>
+                                      <p class="card-text"><%= p.description %></p>
+                                      <p class="card-text useStack">Stacks : <%= p.stack %></p>
+                                      <a href="<%= p.url %>" class="btn btnProj">View website</a>
+                                    </div>
+                                </div>
+                            </div>
+                        <% } %>
+
+
+                       
+                    <% }) %>
+                    
+                   
+                   
+                    
+                   
+                    
+                </div>
+            </div>         
+        </div>
+
+    </div>
+</div>
+
+<div class="footer fixed-bottom navv">
+    <div class="container_content">
+    
+        <ul class="nav nav-tabs nav-pills flex-column flex-sm-row text-center border-0 rounded-nav" id="myTab"
+            role="tablist" aria-owns="home-tab about-tab skill-tab portofolio-tab">
+            <li class="nav-item flex-sm-fill">
+                <a id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true"
+                    class="nav-link border-0 font-weight-bold active">Home</a>
+            </li>
+    
+            <li class="nav-item flex-sm-fill">
+                <a id="about-tab" data-toggle="tab" href="#about" role="tab" aria-controls="about"
+                    aria-selected="false" class="nav-link border-0 font-weight-bold">About</a>
+            </li>
+
+            <li class="nav-item flex-sm-fill">
+                <a id="skill-tab" data-toggle="tab" href="#skill" role="tab" aria-controls="skill"
+                    aria-selected="false" class="nav-link border-0 font-weight-bold">Skill</a>
+            </li>
+
+            <li class="nav-item flex-sm-fill">
+                <a id="portofolio-tab" data-toggle="tab" href="#portofolio" role="tab" aria-controls="portofolio"
+                    aria-selected="false" class="nav-link border-0 font-weight-bold">Portofolio</a>
+            </li>
+            
+        </ul>
+    </div>
+
+    
+</div>
+
+<script>
+    var x = document.querySelectorAll(".card");
+    // for(let i = 0 ; i < x.length ; i++)
+    // {
+    var style = document.createElement('style');
+    style.innerHTML = `
+    
+    #target {
+    color: blueviolet;
+    }
+    `;
+    document.head.appendChild(style);
+    // }
+</script>
+

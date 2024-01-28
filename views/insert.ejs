@@ -1,0 +1,28 @@
+<link rel="stylesheet" href="css/dashboard.css">
+
+
+<div class="dash d-flex">
+    <%- include('dashboard') %>
+    <div class="container">
+
+        <form action="/insert" method="POST" class="insertForm">
+            <label for="file" id="new" style="cursor: pointer;" class="custom-file-upload">Insert Project Image</label>
+            <input type="file" id="file" name="image">
+            <div class="mb-3">
+              <label for="name" class="form-label">Project Name</label>
+              <input type="text" class="form-control inp" id="name" name="name">
+            </div>
+            <div class="mb-3">
+                <label for="">Project Description</label>
+                <div class="form-floatin">
+                    <textarea class="form-control inp" id="description" name="description"></textarea>
+                </div>
+            </div>
+            <div class="mb-3">
+                <label for="stack" class="form-label">Stack</label>
+                <input type="text" class="form-control inp" id="stack" name="stack">
+              </div>
+            <button type="submit" class="btn subBtn">Submit</button>
+          </form>
+    </div>
+</div>
